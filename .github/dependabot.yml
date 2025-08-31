@@ -1,5 +1,12 @@
 version: 2
 updates:
+  # Vérifie les dépendances npm
+  - package-ecosystem: "npm"
+    directory: "/"        # le package.json est à la racine du projet
+    schedule:
+      interval: "weekly"
+
+  # Vérifie aussi GitHub Actions (utile si tu as des workflows)
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
